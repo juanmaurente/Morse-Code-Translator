@@ -33,15 +33,14 @@ body {
 		padding: 10px;
 
 		&--result {
-			padding: 20px;
+			padding: 45px 0px 10px 0px;
 		}
 	}
 
 	&__input {
-		margin: 25px;
 		width: 500px;
 		height: 65px;
-		border-radius: 35px;
+		border-radius: 15px;
 		border: 0px;
 		font-size: 25px;
 		text-align: center;
@@ -51,24 +50,18 @@ body {
 
 	&__button {
 		font-family: 'Exo';
+		margin: 15px;
 		width: 150px;
 		height: 75x;
 		padding: 10px;
 		border-radius: 150px;
 		border: 0px;
 		font-size: 20px;
-		background-color: colors.$light-blue;
+		background-color: #cbc6fd;
 
-		&--try {
-			font-family: 'Exo';
-			width: 150px;
-			height: 75x;
-			padding: 10px;
-			border-radius: 150px;
-			border: 0px;
+		&--clear {
 			font-size: 15px;
-			background-color: colors.$light-blue;
-			margin-top: 10px;
+			margin-top: 15px;
 		}
 
 		&:hover {
@@ -76,10 +69,6 @@ body {
 			font-weight: bold;
 			cursor: pointer;
 		}
-	}
-
-	&__message {
-		padding: 35px;
 	}
 
 	&__result {
@@ -91,5 +80,6 @@ body {
 		height: 250px;
 		letter-spacing: 4px;
 		border-radius: 15px;
+		box-shadow: -1px 1px 3px 0 #cbc6fd71;
 	}
 }

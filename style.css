@@ -53,13 +53,12 @@ body {
   padding: 10px;
 }
 .container__label--result {
-  padding: 20px;
+  padding: 45px 0px 10px 0px;
 }
 .container__input {
-  margin: 25px;
   width: 500px;
   height: 65px;
-  border-radius: 35px;
+  border-radius: 15px;
   border: 0px;
   font-size: 25px;
   text-align: center;
@@ -68,6 +67,7 @@ body {
 }
 .container__button {
   font-family: "Exo";
+  margin: 15px;
   width: 150px;
   height: 75x;
   padding: 10px;
@@ -76,24 +76,14 @@ body {
   font-size: 20px;
   background-color: #cbc6fd;
 }
-.container__button--try {
-  font-family: "Exo";
-  width: 150px;
-  height: 75x;
-  padding: 10px;
-  border-radius: 150px;
-  border: 0px;
+.container__button--clear {
   font-size: 15px;
-  background-color: #cbc6fd;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .container__button:hover {
   background-color: #a59dff;
   font-weight: bold;
   cursor: pointer;
-}
-.container__message {
-  padding: 35px;
 }
 .container__result {
   display: flex;
@@ -107,4 +97,5 @@ body {
   height: 250px;
   letter-spacing: 4px;
   border-radius: 15px;
+  box-shadow: -1px 1px 3px 0 rgba(203, 198, 253, 0.4431372549);
 }
