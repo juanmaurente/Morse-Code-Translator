@@ -1,3 +1,7 @@
+@use './partials/palette' as colors;
+@use './partials/fonts' as fonts;
+@use './partials/mixins' as mixins;
+
 * {
 	margin: 0px;
 	padding: 0px;
@@ -5,5 +9,87 @@
 }
 
 body {
-	background-color: red;
+	font-family: fonts.$font-exo;
+	background-color: colors.$Background-Black;
+	color: colors.$Text-Silver;
+}
+
+.section__title {
+	@include mixins.section-title;
+}
+.section__divider {
+	@include mixins.flex-center;
+	margin: 25px auto;
+	width: 80%;
+	border: 1px solid #fca4a454;
+}
+
+.container {
+	@include mixins.flex-center;
+	flex-direction: column;
+	padding: 25px;
+
+	&__label {
+		padding: 10px;
+
+		&--result {
+			padding: 20px;
+		}
+	}
+
+	&__input {
+		margin: 25px;
+		width: 500px;
+		height: 65px;
+		border-radius: 35px;
+		border: 0px;
+		font-size: 25px;
+		text-align: center;
+		font-family: 'Exo';
+		padding: 10px;
+	}
+
+	&__button {
+		font-family: 'Exo';
+		width: 150px;
+		height: 75x;
+		padding: 10px;
+		border-radius: 150px;
+		border: 0px;
+		font-size: 20px;
+		background-color: colors.$light-blue;
+
+		&--try {
+			font-family: 'Exo';
+			width: 150px;
+			height: 75x;
+			padding: 10px;
+			border-radius: 150px;
+			border: 0px;
+			font-size: 15px;
+			background-color: colors.$light-blue;
+			margin-top: 10px;
+		}
+
+		&:hover {
+			background-color: colors.$darker-blue;
+			font-weight: bold;
+			cursor: pointer;
+		}
+	}
+
+	&__message {
+		padding: 35px;
+	}
+
+	&__result {
+		@include mixins.flex-center;
+		color: #fca4a4;
+		font-size: 25px;
+		background-color: #403f42;
+		width: 500px;
+		height: 250px;
+		letter-spacing: 4px;
+		border-radius: 15px;
+	}
 }

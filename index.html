@@ -4,9 +4,65 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Exo:wght@100;300;400;600&family=Open+Sans:wght@300;400;600;700;800&family=Source+Code+Pro:ital,wght@0,300;0,500;0,800;1,300&	display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/e5c7a5fcc2.js"
+			crossorigin="anonymous"
+		></script>
 		<link rel="stylesheet" href="style.css" />
+
 		<script src="index.js" defer></script>
 		<title>Document</title>
 	</head>
-	<body></body>
+	<body>
+		<header class="section__title">
+			<h1>Morse Code Translator</h1>
+		</header>
+		<main>
+			<section class="container">
+				<label class="container__label" for="english_input"
+					>Type your english word</label
+				>
+				<input
+					class="container__input"
+					type="text"
+					name="english_input"
+					id="en_input"
+				/>
+				<button class="container__button" id="en_button">
+					Translate
+				</button>
+				<label class="container__label--result"
+					>Your Code Morse is</label
+				>
+				<h4 class="container__result" id="en_result">.---...-..</h4>
+				<button class="container__button--try">Try Again</button>
+			</section>
+			<div class="section__divider"></div>
+			<section class="container">
+				<label class="container__label" for="english_input"
+					>Type your code morse</label
+				>
+				<input
+					class="container__input"
+					type="text"
+					name="morse_input"
+					id="mor_input"
+				/>
+				<button class="container__button" id="mor_button">
+					Translate
+				</button>
+				<label class="container__label--result"
+					>Your English text is</label
+				>
+				<h4 class="container__result" id="mor_result">.---...-..</h4>
+				<button class="container__button--try">Try Again</button>
+			</section>
+		</main>
+	</body>
 </html>

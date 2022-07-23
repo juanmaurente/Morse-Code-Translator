@@ -1,0 +1,25 @@
+@mixin section-title {
+	font-family: 'Exo';
+	color: #fca4a4;
+	font-size: 25px;
+	letter-spacing: 2px;
+	font-weight: 300;
+	margin: 50px auto;
+	text-align: center;
+}
+
+/* change to mixin */
+@mixin section-body {
+	height: 100vh;
+	margin: 80px auto;
+	display: flex;
+	justify-content: center;
+	padding-top: 75px;
+}
+
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}

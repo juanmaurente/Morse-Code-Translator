@@ -1,3 +1,14 @@
+/* 
+------ Color Pallete
+
+#747c8c - Slate Gray
+#f2f2f2 - Cultured
+#fca4a4 - Light Pink
+
+------- Fonts 
+Source Code Pro
+*/
+/* change to mixin */
 * {
   margin: 0px;
   padding: 0px;
@@ -5,5 +16,95 @@
 }
 
 body {
-  background-color: red;
+  font-family: "Exo", sans-serif;
+  background-color: #252426;
+  color: #c6c0be;
+}
+
+.section__title {
+  font-family: "Exo";
+  color: #fca4a4;
+  font-size: 25px;
+  letter-spacing: 2px;
+  font-weight: 300;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.section__divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 25px auto;
+  width: 80%;
+  border: 1px solid rgba(252, 164, 164, 0.3294117647);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 25px;
+}
+.container__label {
+  padding: 10px;
+}
+.container__label--result {
+  padding: 20px;
+}
+.container__input {
+  margin: 25px;
+  width: 500px;
+  height: 65px;
+  border-radius: 35px;
+  border: 0px;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Exo";
+  padding: 10px;
+}
+.container__button {
+  font-family: "Exo";
+  width: 150px;
+  height: 75x;
+  padding: 10px;
+  border-radius: 150px;
+  border: 0px;
+  font-size: 20px;
+  background-color: #cbc6fd;
+}
+.container__button--try {
+  font-family: "Exo";
+  width: 150px;
+  height: 75x;
+  padding: 10px;
+  border-radius: 150px;
+  border: 0px;
+  font-size: 15px;
+  background-color: #cbc6fd;
+  margin-top: 10px;
+}
+.container__button:hover {
+  background-color: #a59dff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.container__message {
+  padding: 35px;
+}
+.container__result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fca4a4;
+  font-size: 25px;
+  background-color: #403f42;
+  width: 500px;
+  height: 250px;
+  letter-spacing: 4px;
+  border-radius: 15px;
 }
