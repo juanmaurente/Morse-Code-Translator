@@ -4,6 +4,7 @@ const enResult = document.querySelector('#en_result');
 const morseInput = document.querySelector('#mor_input');
 const morseButton = document.querySelector('#mor_button');
 const morseResult = document.querySelector('#mor_result');
+const clearBtn = document.querySelectorAll('.container__button--clear');
 
 const alphabetToMorse = {
 	A: '.-',
@@ -32,8 +33,17 @@ const alphabetToMorse = {
 	X: '-..-',
 	Y: '-.--',
 	Z: '--..',
-	' ': ' ',
+	' ': '|',
 };
+
+clearBtn.forEach((btn) =>
+	btn.addEventListener('click', () => {
+		enInput.value = '';
+		enResult.innerText = '';
+		morseInput.value = '';
+		morseResult.innerText = '';
+	}),
+);
 
 enButton.addEventListener('click', () => {
 	let engText = enInput.value;
@@ -41,13 +51,29 @@ enButton.addEventListener('click', () => {
 	translateToMorse(engText);
 });
 
-const translateToMorse = (str) => {
-	const alphaArray = Object.entries(alphabetToMorse);
+morseButton.addEventListener('click', () => {
+	let morseCode = morseInput.value;
+	morseCode.split(' ');
+	translateToEng(morseCode);
+});
+
+export const translateToMorse = (str) => {
 	const result = [];
-	console.log(alphaArray);
 	[...str].map((char) => {
 		result.push(Object.values(alphabetToMorse[char]).join(''));
-		return;
 	});
-	enResult.innerText = result.join('   ');
+	enResult.innerText = result.join(' ');
+};
+
+const morseToAlphabet = Object.keys(alphabetToMorse).reduce(
+	(obj, key) => Object.assign({}, obj, { [alphabetToMorse[key]]: key }),
+	{},
+);
+
+export const translateToEng = (morseCode) => {
+	const result = [];
+	morseCode.split(' ').map((char) => {
+		result.push(Object.values(morseToAlphabet[char]));
+	});
+	morseResult.innerText = result.join('');
 };
